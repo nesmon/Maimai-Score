@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import './App.css';
-import charts from './charts.json';
-import Chart from './Components/chart/chart';
+import './Index.css';
+import charts from './../../charts.json';
+import Chart from './../../Components/chart/chart';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <div className="songList">
         {charts.map((item, index) => {
           return (
-            <Link to={`/ls/${item.name}`} key={index}>
+            <Link to={`/score/${item.name}`} key={index}>
               <Chart key={index} data={item} />
             </Link>
           )
