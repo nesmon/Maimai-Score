@@ -7,6 +7,7 @@
     border-bottom: 5px solid #A32D44;
     transition: transform 0.2s;
     transform: scale(1);
+    text-align: center;
 }
 
 .chart:hover {
