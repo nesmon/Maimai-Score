@@ -1,0 +1,76 @@
+.chart {
+    width: 18%;
+    padding: 0;
+    margin: 0;
+    background-color: #f97e8e;
+    border-radius: 15px;
+    border-bottom: 5px solid #A32D44;
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.chart:hover {
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+.difficulty > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.difficulty > ul > li {
+    padding: 5px;
+}
+
+.chart > .song {
+    padding-top: 20px;
+    background-color: #f06e7f;
+    border-radius: 15px;
+    border-bottom: 5px solid #e14c6a;
+}
+
+.songInfo {
+    padding: 5px;
+}
+
+.chartImg {
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.difficulty-level {
+    margin: 3px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.easy {
+    background-color: #1fecf0;
+}
+
+.basic{
+    background-color: #8cc20f;
+}
+
+.advance{
+    background-color: #e5cd18;
+}
+
+.expert{
+    background-color: #ed1f1f;
+}
+
+.master{
+    background-color: #d42ccf;
+}
+
+.remaster{
+    background: linear-gradient(110deg, #d42ccf 48%, #ffffff 52%);;
+}

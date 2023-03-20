@@ -1,0 +1,63 @@
+[
+    {
+        "name" : "Axeria",
+        "artist": "AcuticNotes",
+        "category": "Original",
+        "difficulty" : [
+            {
+                "Easy": "4",
+                "Basic": "6",
+                "Advance": "7+",
+                "Expert": "10+",
+                "Master": "13"                
+            }
+        ],
+        "imageCover": "https://silentblue.remywiki.com/images/d/d8/Axeria.png"
+    },
+    {
+        "name" : "Our Wrenaly",
+        "artist": "t+pazolite",
+        "category": "Original",
+        "difficulty" : [
+            {
+                "Easy": "4",
+                "Basic": "6",
+                "Advance": "9",
+                "Expert": "11",
+                "Master": "13"
+            }
+        ],
+        "imageCover": "https://silentblue.remywiki.com/images/0/05/Our_Wrenally.png"
+    },
+    {
+        "name" : "Milk",
+        "artist": "モリモリあつし",
+        "category": "GAME & VARIETY",
+        "difficulty" : [
+            {
+                "Easy": "1",
+                "Basic": "4",
+                "Advance": "6",
+                "Expert": "10+",
+                "Master": "12+"                
+            }
+        ],
+        "imageCover": "https://silentblue.remywiki.com/images/e/eb/MilK.png"
+    },
+    {
+        "name" : "Pandora Paradoxxx",
+        "artist": "Sakuzyo",
+        "category": "Original",
+        "difficulty" : [
+            {
+                "Easy": "6",
+                "Basic": "7+",
+                "Advance": "10+",
+                "Expert": "12+",
+                "Master": "13+",
+                "Remaster": "14"
+            }
+        ],
+        "imageCover": "https://silentblue.remywiki.com/images/5/52/PANDORA_PARADOXXX.png"
+    }
+]
