@@ -1,0 +1,7 @@
+.songList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0;
+}
