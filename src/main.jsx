@@ -1,26 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Route/Index/Index';
-import Score from './Route/Score/Score';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+import Router from './router.jsx';
 
-
-const Routing = () => {
-  return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/score/:chartId" element={<Score />} />
-      </Routes>
-    </Router>
-  )
-}
+const router = createBrowserRouter(Router);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Routing />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
