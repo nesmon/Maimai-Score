@@ -18,6 +18,10 @@ const router = [
       element: <ChartScore />,
     },
     {
+      path: "/how-to",
+      element:<div>How to - Work In progress</div>,
+    },
+    {
       path: "/admin/charts/add",
       element: <AddChart />,
     },

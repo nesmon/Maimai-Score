@@ -1,11 +1,10 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from './../../assets/maimai.png'
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Charts', href: '/charts', current: false },
+  { name: 'Home', href: '/' },
+  { name: 'Charts', href: '/charts' },
 ]
 
 function classNames(...classes) {
@@ -20,7 +19,6 @@ function Navbar() {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -35,12 +33,12 @@ function Navbar() {
                   <img
                     className="block h-8 w-auto lg:hidden"
                     src={Logo}
-                    alt="Your Company"
+                    alt="Maimai"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src={Logo}
-                    alt="Your Company"
+                    alt="Maimai"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -50,10 +48,10 @@ function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.href === window.location.pathname ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.href === window.location.pathname ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
@@ -72,11 +70,11 @@ function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.href === window.location.pathname ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
+                  aria-current={item.href === window.location.pathname ? 'page' : undefined}
+                  >
                   {item.name}
                 </Disclosure.Button>
               ))}
