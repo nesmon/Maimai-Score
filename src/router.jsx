@@ -1,6 +1,7 @@
 import Index from './Route/Index/Index';
 import Charts from './Route/Charts/Charts';
 import ChartScore from './Route/ChartScore/ChartScore';
+import AddChart from './Route/Admin/AddChart/AddChart';
 import NotFound from './Route/NotFound/NotFound';
 
 const router = [
@@ -13,8 +14,12 @@ const router = [
       element: <Charts />,
     },
     {
-      path: "/charts/:chartId",
+      path: "/charts/:chartId/score",
       element: <ChartScore />,
+    },
+    {
+      path: "/admin/charts/add",
+      element: <AddChart />,
     },
     {
       path: "*",
