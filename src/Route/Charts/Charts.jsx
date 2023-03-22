@@ -29,7 +29,7 @@ function Charts() {
       <div className="songList">
         {charts.map((item, index) => {
           return (
-            <Link to={`/score/${item.name}`} key={index}>
+            <Link to={`/charts/${item.id}/score`} key={index}>
               <Chart key={index} data={item} />
             </Link>
           )

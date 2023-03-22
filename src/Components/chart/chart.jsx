@@ -4,7 +4,7 @@ const Chart = ({ data }) => {
     return (
         <div className="chart">
             <div className='song'>
-                <img className='chartImg inline' src={data.imageCover} alt={data.name} width="80%"/>
+                <img className='chartImg inline' src={data.imageCover} alt={data.title} width="80%"/>
                 <div className='difficulty'>
                     {data.difficulty.map((item, index) => {
                         return (
@@ -21,7 +21,7 @@ const Chart = ({ data }) => {
                 </div>
             </div>
             <div className='songInfo'>
-                <div>{data.name}</div> 
+                <div>{data.title}</div> 
                 <div>{data.artist}</div>
             </div>        
         </div>
