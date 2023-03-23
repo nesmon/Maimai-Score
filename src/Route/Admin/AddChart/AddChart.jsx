@@ -68,38 +68,38 @@ function AddChart() {
                     </select>
                 </div>
                 <div>
-                    <div className='text-2xl'>
+                    <div className='text-2xl w-6'>
                         <p>Difficulty: </p>
                     </div>
-                    <div className='flex content-start '>
+                    <div className='flex content-start'>
                         <div className='p-3'>
                         <label htmlFor="easy" className=' flex -space-x-4 text-xl uppercase tracking-wide text-blue-500 font-semibold'>Easy</label>
-                        <input type="string" name="easy" id="easy" className="w-24 bg-blue-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"/>
+                        <input type="string" name="easy" id="easy" className="w-3/6 bg-blue-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"/>
                         </div>
 
                         <div className='p-3'>
                         <label htmlFor="basic" className=' flex -space-x-4 text-xl uppercase tracking-wide text-green-500 font-semibold'>Basic</label>
-                        <input type="string" name="basic" id="basic" className="w-24 bg-green-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500"/>
+                        <input type="string" name="basic" id="basic" className="w-3/6 bg-green-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500"/>
                         </div>
                         
                         <div className='p-3'>
                         <label htmlFor="advance" className=' flex -space-x-4 text-xl uppercase tracking-wide text-yellow-500 font-semibold'>Advance</label>
-                        <input type="string" name="advance" id="advance" className="w-24 bg-yellow-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-500" />
+                        <input type="string" name="advance" id="advance" className="w-3/6 bg-yellow-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-500" />
                         </div>
 
                         <div className='p-3'>
                         <label htmlFor="expert" className='flex -space-x-4 text-xl uppercase tracking-wide text-red-500 font-semibold'>Expert</label>
-                        <input type="string" name="expert" id="expert" className="w-24 bg-red-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500"/>
+                        <input type="string" name="expert" id="expert" className="w-3/6 bg-red-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500"/>
                         </div>
 
                         <div className='p-3'>
                         <label htmlFor="master" className='flex -space-x-4 text-xl uppercase tracking-wide text-fuchsia-500 font-semibold'>Master</label>
-                        <input type="string" name="master" id="master" className="w-24 bg-fuchsia-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-fuchsia-500"/>
+                        <input type="string" name="master" id="master" className="w-3/6 bg-fuchsia-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-fuchsia-500"/>
                         </div>
 
                         <div className='p-3'>
                         <label htmlFor="remaster" className='flex -space-x-4 text-xl uppercase tracking-wide text-indigo-500 font-semibold'>Remaster</label>
-                        <input type="string" name="remaster" id="remaster" className="w-24 bg-gray-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"/>
+                        <input type="string" name="remaster" id="remaster" className="w-3/6 bg-gray-300 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"/>
                         </div>
                     </div>
                 </div>
