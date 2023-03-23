@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 function Index() {
   
   const [charts, setCharts] = useState([]);
+  const [scores, setScores] = useState([]);
 
   const getCharts = async () => {
     const db = getFirestore();
@@ -16,10 +17,23 @@ function Index() {
     return charts;
   }
 
+  const getScores = async () => {
+    const db = getFirestore();
+    const scoreRef = collection(db, "Score");
+    const snapshot = await getDocs(scoreRef);
+    const scores = snapshot.docs.map(doc => doc.data());
+
+    return scores;
+  }
+
+
   useEffect(() => {
     async function fetchData() {
-      const data = await getCharts();
-      setCharts(data);
+      const charts = await getCharts();
+      setCharts(charts);
+
+      const scores = await getScores();
+      setScores(scores);
     }
     fetchData();
   }, []);
@@ -27,8 +41,8 @@ function Index() {
   return (
     <div className="App">
       <div className="flex justify-center">
-        <div className="w-6/12 h-80 bg-gray-200 rounded-lg border-2 border-indigo-800 m-2 flex flex-row justify-around">
-          <img src={Yuki} alt="Yuki" />
+        <div className="sm:w-6/12 h-80 bg-gray-200 rounded-lg border-2 border-indigo-800 m-2 flex flex-row justify-around">
+          <img src={Yuki} alt="Yuki" className="hidden sm:block" />
           <div className="flex items-center">
             <div className="flex flex-col">
               <div className="flex">
@@ -36,10 +50,10 @@ function Index() {
                   <span className="text-indigo-500 text-xl">{charts.length}</span> Charts
                 </span>
                 <span className="font-bold text-sm m-2">
-                  <span className="text-indigo-500 text-xl">0</span> Score
+                  <span className="text-indigo-500 text-xl">{scores.length}</span> Score
                 </span>
               </div>
-              <div>
+              <div className="mx-3">
                 <p className="text-md">
                   Welcome to MaiScore, a website that allows you to view your score from Maimai.
                   You will be able to submit your score for each chart and see other score from other players.
