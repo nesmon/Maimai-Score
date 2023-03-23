@@ -17,6 +17,10 @@ All work manually, you need to post your score in the form linked to each chart.
 5. Use Kurami for run the command to push default value in firebase using 'npm run kurami load:default:data'
 6. Run `npm run dev` to start local server
 
+## TODO
+- Add a feature to request a new chart
+- Edit admin part for beter design when adding new chart
+
 ## Libraries
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
@@ -24,3 +28,8 @@ All work manually, you need to post your score in the form linked to each chart.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React Router](https://reactrouter.com/)
 - [Kurami](https://github.com/nesmon/Kurami)
+
+## Disclaimer
+This project is not affiliated with Sega or any of its subsidiaries. 
+The name "Maimai" and the logo are trademarks of Sega.
+
