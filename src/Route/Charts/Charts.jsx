@@ -40,7 +40,7 @@ function Charts() {
 
   return (
     <div className="App">
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-wrap">
         <button onClick={() => switchCategory("all")} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2">All</button>
         <button onClick={() => switchCategory("pop")} className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded m-2">Pop & Anime</button>
         <button onClick={() => switchCategory("niconico")} className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded m-2">Niconico & Vocaloid</button>

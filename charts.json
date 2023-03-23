@@ -1,8 +1,9 @@
 [
     {
+        "id": "axe611acu8",
         "name" : "Axeria",
         "artist": "AcuticNotes",
-        "category": "Original",
+        "category": "original",
         "difficulty" : [
             {
                 "Easy": "4",
@@ -15,9 +16,10 @@
         "imageCover": "https://silentblue.remywiki.com/images/d/d8/Axeria.png"
     },
     {
+        "id": "our1110t+p8",
         "name" : "Our Wrenaly",
         "artist": "t+pazolite",
-        "category": "Original",
+        "category": "original",
         "difficulty" : [
             {
                 "Easy": "4",
@@ -30,9 +32,10 @@
         "imageCover": "https://silentblue.remywiki.com/images/0/05/Our_Wrenally.png"
     },
     {
+        "id": "mil57mil4",
         "name" : "Milk",
         "artist": "モリモリあつし",
-        "category": "GAME & VARIETY",
+        "category": "game",
         "difficulty" : [
             {
                 "Easy": "1",
@@ -45,9 +48,10 @@
         "imageCover": "https://silentblue.remywiki.com/images/e/eb/MilK.png"
     },
     {
+        "id": "pandora_paradoxxx",
         "name" : "Pandora Paradoxxx",
         "artist": "Sakuzyo",
-        "category": "Original",
+        "category": "original",
         "difficulty" : [
             {
                 "Easy": "6",

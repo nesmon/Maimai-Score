@@ -8,6 +8,7 @@ function Score() {
 
   const [chart, setChart] = useState([]);
   const [scores, setScores] = useState([]);
+  const [selectedDifficulty, setSelectedDifficulty] = useState("Easy");
 
   const getChart = async () => {
     const db = getFirestore();
@@ -25,6 +26,7 @@ function Score() {
     const scores = snapshot.docs.map(doc => doc.data());
     const score = scores.filter(item => item.chartId === chartId && item.difficulty === difficulty);
     score.sort((a, b) => b.score - a.score);
+    setSelectedDifficulty(difficulty);
 
     setScores(score);
   }
@@ -42,7 +44,9 @@ function Score() {
     fetchData();
   }, []);
 
-  console.log(scores)
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
 
   const getCategory = () => {
     switch (chart.category) {
@@ -76,12 +80,30 @@ function Score() {
                 {chart.difficulty && Array.isArray(chart.difficulty) && chart.difficulty.map((item, index) => {
                   return (  
                     <ul key={index} className="flex flex-row justify-center font-bold flex-wrap">
-                      <li onClick={() => switchScoreDifficulty("Easy")} className='rounded-lg w-10 m-1 easy'>{item.Easy}</li>
-                      <li onClick={() => switchScoreDifficulty("Basic")} className='rounded-lg w-10 m-1 basic'>{item.Basic}</li>
-                      <li onClick={() => switchScoreDifficulty("Advance")} className='rounded-lg w-10 m-1 advance'>{item.Advance}</li>
-                      <li onClick={() => switchScoreDifficulty("Expert")} className='rounded-lg w-10 m-1 expert'>{item.Expert}</li>
-                      <li onClick={() => switchScoreDifficulty("Master")} className='rounded-lg w-10 m-1 master'>{item.Master}</li>
-                      {item.Remaster ? <li onClick={() => switchScoreDifficulty("Re:Master")} className='difficulty-level remaster'>{item.Remaster}</li> : null}
+                      <li onClick={() => switchScoreDifficulty("Easy")} className={classNames(
+                          'Easy' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 easy'
+                        )}>{item.Easy}</li>
+                        <li onClick={() => switchScoreDifficulty("Basic")} className={classNames(
+                          'Basic' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 basic'
+                        )}>{item.Basic}</li>
+                      <li onClick={() => switchScoreDifficulty("Advance")} className={classNames(
+                          'Advance' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 advance'
+                        )}>{item.Advance}</li>
+                      <li onClick={() => switchScoreDifficulty("Expert")} className={classNames(
+                          'Expert' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 expert'
+                        )}>{item.Expert}</li>
+                      <li onClick={() => switchScoreDifficulty("Master")} className={classNames(
+                          'Master' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 master'
+                        )}>{item.Master}</li>
+                      {item.Remaster ? <li onClick={() => switchScoreDifficulty("Re:Master")} className={classNames(
+                          'Re:Master' === selectedDifficulty ? 'border-2 border-indigo-800' : 'border-0',
+                          'rounded-lg w-10 m-1 remaster'
+                        )}>{item.Remaster}</li> : null}
                     </ul> 
                   )
                 })}
@@ -100,7 +122,7 @@ function Score() {
 
       <hr  />
 
-      <div className="mt-8 flow-root">
+      <div className="m-3 flow-root">
         <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
