@@ -8,7 +8,6 @@ function AddChart() {
         const form = e.target;
         const formData = new FormData(form);
 
-        let date = new Date();
         let id = `${formData.get('title').slice(0, 3).toLowerCase()}` + 
         `${formData.get('title').length}` + 
         `${formData.get('artist').length}` + 
@@ -62,7 +61,6 @@ function AddChart() {
                         <option value="niconico">niconico & Vocaloid</option>
                         <option value="touhou">Touhou Project</option>
                         <option value="game">Game & Variety</option> 
-                        <option value="maimai">Maimai</option>
                         <option value="original">Original & Joypolis</option>
                         <option value="utage">Utage</option>
                     </select>
