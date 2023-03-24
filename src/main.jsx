@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Navbar from './Components/navbar/navbar';
 
 // Router
 import {
@@ -18,10 +19,10 @@ import Config from './config.js';
 const firebaseConfig = Config.firebase;
 const app = initializeApp(firebaseConfig);
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Navbar />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
